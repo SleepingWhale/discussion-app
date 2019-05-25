@@ -1,0 +1,41 @@
+.base {
+  padding: 0.3rem 0.5rem;
+  height: 1.8rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1;
+  border-radius: 0.2rem;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.primary {
+  color: #fff;
+  background-color: #5cbdff;
+  border-color: #5cbdff;
+}
+
+.primary:hover {
+  color: #fff;
+  background-color: #5fb0ff;
+  border-color: #5ba4ff;
+}
+
+.outline {
+  color: #5cbdff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #5cbdff;
+}
+
+.outline:hover {
+  color: #fff;
+  background-color: #5fb0ff;
+  border-color: #5ba4ff;
+}
