@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin-top: 0.8rem;
+  background-color: white;
+}
+
+.delimiter {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  border: 1px solid #d4d4d4;
+}
+
+.text {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #5d5d5d;
+}
+
+.buttons {
+  margin-top: 0.8rem;
+}
+
+.buttons > * {
+  margin-right: 0.4rem;
+}
