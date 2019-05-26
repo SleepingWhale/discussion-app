@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import posts from './components/posts/Posts.redux';
+import search from './components/search/Search.redux';
 
 export const store = createStore(
   combineReducers({
     posts,
+    search,
     user: (state = {}) => state
   }),
   {
