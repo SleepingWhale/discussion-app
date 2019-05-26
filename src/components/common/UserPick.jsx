@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import styles from './UserPick.module.css';
 
 export function UserPick({ url }) {
-  return <img src={url} className={styles.img} alt="user_pick" />;
+  return url ? (
+    <img src={url} className={styles.img} alt="u" />
+  ) : (
+    <div className={styles.placeHolder}>
+      <i className="material-icons md-24 md-light">sentiment_very_satisfied</i>
+    </div>
+  );
 }
 
 UserPick.propTypes = {
@@ -11,5 +17,5 @@ UserPick.propTypes = {
 };
 
 UserPick.defaultProps = {
-  url: 'http://placekitten.com/32/32'
+  url: null
 };
