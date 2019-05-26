@@ -5,6 +5,7 @@ import styles from './App.module.css';
 import { Search } from '../common';
 import { Post } from '../post';
 import { PostEditor } from '../postEditor';
+import { Comments } from '../comments';
 
 export function App() {
   return (
@@ -13,6 +14,8 @@ export function App() {
         <Search onChange={() => {}} />
       </div>
       <PostEditor />
+      <Post />
+      <Comments />
       <Post />
     </div>
   );
