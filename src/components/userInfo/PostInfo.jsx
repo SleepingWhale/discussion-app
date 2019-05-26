@@ -2,16 +2,16 @@ import React from 'react';
 import styles from './UserInfo.module.css';
 import { UserPick, Button } from '../common';
 
-export function UserInfo() {
+export function PostInfo({ name, nickname, pick, date }) {
   return (
     <div className={styles.container}>
-      <UserPick />
+      <UserPick url={pick} />
       <div className={styles.mr}>
-        <strong className={styles.userName}>User Name</strong>
-        <span className={styles.time}>10 mins ago</span>
+        <strong className={styles.userName}>{name}</strong>
+        <span className={styles.time}>{date}</span>
       </div>
       <a href="/" className={styles.userLink}>
-        @user_link
+        {nickname}
       </a>
       <div className={styles.followButton}>
         <Button type="button" onClick={() => {}} mode="outline">

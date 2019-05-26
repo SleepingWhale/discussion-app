@@ -4,18 +4,17 @@ import styles from './Posts.module.css';
 import { Search } from '../common';
 import { Post } from '../post';
 import { PostEditor } from '../postEditor';
-import { Comments } from '../comments';
 
-export function Posts() {
+export function Posts({ posts }) {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
         <Search onChange={() => {}} />
       </div>
       <PostEditor />
-      <Post />
-      <Comments />
-      <Post />
+      {posts.map(p => (
+        <Post {...p} />
+      ))}
     </div>
   );
 }

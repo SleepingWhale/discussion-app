@@ -16,7 +16,7 @@ export const store = createStore(
         author: {
           name: 'Neo',
           nickname: '@neo42',
-          pick: 'http://placekitten.com/32/32/0'
+          pick: 'http://placekitten.com/32/32?image=1'
         },
         likes: 5
       },
@@ -28,7 +28,7 @@ export const store = createStore(
         author: {
           name: 'Agent Smith',
           nickname: '@smithy',
-          pick: 'http://placekitten.com/32/32/1'
+          pick: 'http://placekitten.com/32/32?image=2'
         },
         likes: 1
       }
