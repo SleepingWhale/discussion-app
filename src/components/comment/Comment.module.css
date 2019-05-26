@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin-top: 0.8rem;
+  background-color: white;
+  display: flex;
+}
+
+.comment {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: #5d5d5d;
+}
