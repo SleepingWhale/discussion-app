@@ -38,7 +38,7 @@ export const store = createStore(
     user: {
       name: 'Neo',
       nickname: '@neo42',
-      pick: 'http://placekitten.com/32/32/0'
+      pick: 'http://placekitten.com/32/32?image=1'
     }
   },
   window !== 'undefined' &&

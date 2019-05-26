@@ -1,25 +1,54 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import styles from './PostEditor.module.css';
 import { Button, UserPick } from '../common';
 
-export function PostEditor() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.heading}>
-        <UserPick />
-        <span className={styles.question}>What&apos;s happening?</span>
+export class PostEditor extends PureComponent {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired
+  };
+
+  state = {
+    text: ''
+  };
+
+  onChange = e => {
+    this.setState({
+      text: e.target.value
+    });
+  };
+
+  onSubmit = () => {
+    const { text } = this.state;
+    const { onSubmit } = this.props;
+
+    onSubmit(text);
+  };
+
+  render() {
+    const { text } = this.state;
+    const { userPickUrl } = this.props;
+
+    return (
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <UserPick url={userPickUrl} />
+          <span className={styles.question}>What&apos;s happening?</span>
+        </div>
+        <textarea
+          className={styles.text}
+          maxLength={1000}
+          rows={4}
+          placeholder="Write something..."
+          onChange={this.onChange}
+          value={text}
+        />
+        <div className={styles.buttons}>
+          <Button onClick={this.onSubmit} mode="primary">
+            <span>Post</span>
+          </Button>
+        </div>
       </div>
-      <textarea
-        className={styles.text}
-        maxLength={1000}
-        rows={4}
-        placeholder="Write something..."
-      />
-      <div className={styles.buttons}>
-        <Button onClick={() => {}} mode="primary">
-          Post
-        </Button>
-      </div>
-    </div>
-  );
+    );
+  }
 }

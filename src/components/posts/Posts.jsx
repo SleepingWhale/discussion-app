@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Posts.module.css';
 import { SearchContainer } from '../search';
 import { Post } from '../post';
-import { PostEditor } from '../postEditor';
+import { PostEditorContainer } from '../postEditor';
 
 export function Posts({ posts }) {
   return (
@@ -11,7 +11,7 @@ export function Posts({ posts }) {
       <div className={styles.search}>
         <SearchContainer />
       </div>
-      <PostEditor />
+      <PostEditorContainer />
       {posts.map(p => (
         <Post {...p} key={p.id} />
       ))}
