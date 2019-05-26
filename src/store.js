@@ -14,7 +14,7 @@ export const store = createStore(
         id: 1,
         date: Date.now(),
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et pretium risus, eget aliquam massa. Quisque hendrerit, nunc sit amet convallis convallis, nisi felis aliquam nisi, sed convallis enim justo quis libero. Aliquam pretium sapien ac consectetur molestie. Mauris egestas fermentum ex vel ultricies. Proin id finibus libero, ac consequat odio. Suspendisse rhoncus enim sed diam fermentum suscipit. Etiam a semper risus. Aliquam pretium dictum metus, at bibendum metus blandit sit amet. Donec at eros id purus viverra luctus. Vivamus pulvinar vel lacus at consectetur. Phasellus sit amet fermentum ligula. Donec eu convallis dui. Nam tristique aliquet consequat. Donec ac risus non diam lacinia egestas ac ac lorem. In tempor augue ex, et efficitur nisl ultrices vel. Integer rhoncus neque lacinia neque luctus vehicula.',
         author: {
           name: 'Neo',
           nickname: '@neo42',
@@ -26,7 +26,7 @@ export const store = createStore(
         id: 2,
         date: Date.now(),
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          'Donec viverra ex quis risus pharetra tempor et rhoncus nibh. Sed at fermentum quam, nec luctus tellus. Integer molestie libero a dui pretium facilisis. Nullam pellentesque mattis porttitor. Fusce eu pretium arcu, vitae elementum risus. Ut sed lacinia odio, et euismod tortor. Duis id risus odio. Nullam sed sapien lobortis sapien volutpat tincidunt vel non sem. Etiam vestibulum quam eu justo aliquam dictum. Nulla euismod magna tortor, at bibendum dolor pellentesque nec. Sed vel sem hendrerit, cursus massa quis, placerat sem. Phasellus augue neque, tincidunt eu convallis sodales, mattis vitae erat. Cras tortor ipsum, molestie eget vehicula ac, placerat eu odio. Fusce et erat magna. In eu volutpat augue.',
         author: {
           name: 'Agent Smith',
           nickname: '@smithy',
