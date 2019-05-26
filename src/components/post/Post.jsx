@@ -21,10 +21,12 @@ export function Post() {
       </div>
       <div className={styles.buttons}>
         <Button onClick={() => {}} mode="primary">
-          99
+          <i className="material-icons md-18">thumb_up</i>
+          <span className={styles.ml04}>99</span>
         </Button>
         <Button onClick={() => {}} mode="primary">
-          Comment
+          <i className="material-icons md-18">mode_comment</i>
+          <span className={styles.ml04}>Comment</span>
         </Button>
       </div>
     </div>
