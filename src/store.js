@@ -1,18 +1,22 @@
 import { combineReducers, createStore } from 'redux';
 import posts from './components/posts/Posts.redux';
 import search from './components/search/Search.redux';
+import comments from './components/comments/Comments.redux';
 import { guid } from './utils';
+
+const guid1 = guid();
 
 export const store = createStore(
   combineReducers({
     posts,
     search,
+    comments,
     user: (state = {}) => state
   }),
   {
     posts: [
       {
-        id: guid(),
+        id: guid1,
         date: new Date(),
         content:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et pretium risus, eget aliquam massa. Quisque hendrerit, nunc sit amet convallis convallis, nisi felis aliquam nisi, sed convallis enim justo quis libero. Aliquam pretium sapien ac consectetur molestie. Mauris egestas fermentum ex vel ultricies. Proin id finibus libero, ac consequat odio. Suspendisse rhoncus enim sed diam fermentum suscipit. Etiam a semper risus. Aliquam pretium dictum metus, at bibendum metus blandit sit amet. Donec at eros id purus viverra luctus. Vivamus pulvinar vel lacus at consectetur. Phasellus sit amet fermentum ligula. Donec eu convallis dui. Nam tristique aliquet consequat. Donec ac risus non diam lacinia egestas ac ac lorem. In tempor augue ex, et efficitur nisl ultrices vel. Integer rhoncus neque lacinia neque luctus vehicula.',
@@ -38,6 +42,36 @@ export const store = createStore(
         isLiked: false
       }
     ],
+    comments: {
+      [guid1]: [
+        {
+          id: 1,
+          content:
+            'It is a long established fact that a reader will be distracted by the\n' +
+            '        readable content of a page when looking at its layout. The point of\n' +
+            '        using Lorem Ipsum is that it has a more-or-less normal distribution of\n' +
+            '        letters',
+          author: {
+            name: 'Agent Smith',
+            nickname: '@smithy',
+            pick: 'http://placekitten.com/32/32?image=2'
+          }
+        },
+        {
+          id: 2,
+          content:
+            'It is a long established fact that a reader will be distracted by the\n' +
+            '        readable content of a page when looking at its layout. The point of\n' +
+            '        using Lorem Ipsum is that it has a more-or-less normal distribution of\n' +
+            '        letters',
+          author: {
+            name: 'Neo',
+            nickname: '@neo42',
+            pick: 'http://placekitten.com/32/32?image=1'
+          }
+        }
+      ]
+    },
     user: {
       name: 'Neo',
       nickname: '@neo42',
