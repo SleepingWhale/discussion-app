@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Posts.module.css';
 import { SearchContainer } from '../search';
-import { Post } from '../post';
+import { PostContainer } from '../post';
 import { PostEditorContainer } from '../postEditor';
 
 export function Posts({ posts }) {
@@ -13,7 +13,7 @@ export function Posts({ posts }) {
       </div>
       <PostEditorContainer />
       {posts.map(p => (
-        <Post {...p} key={p.id} />
+        <PostContainer {...p} key={p.id} />
       ))}
     </div>
   );

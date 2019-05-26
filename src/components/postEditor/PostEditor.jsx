@@ -23,6 +23,10 @@ export class PostEditor extends PureComponent {
     const { onSubmit } = this.props;
 
     onSubmit(text);
+
+    this.setState({
+      text: ''
+    });
   };
 
   render() {

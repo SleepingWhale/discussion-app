@@ -8,7 +8,7 @@ export function PostInfo({ name, nickname, pick, date }) {
       <UserPick url={pick} />
       <div className={styles.mr}>
         <strong className={styles.userName}>{name}</strong>
-        <span className={styles.time}>{date}</span>
+        <span className={styles.time}>{date.toLocaleString()}</span>
       </div>
       <a href="/" className={styles.userLink}>
         {nickname}
