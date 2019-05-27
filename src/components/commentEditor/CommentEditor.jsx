@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './CommentEditor.module.css';
 import { Button } from '../common';
@@ -8,9 +8,17 @@ export class CommentEditor extends Component {
     onSubmit: PropTypes.func.isRequired
   };
 
-  state = {
-    text: ''
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ''
+    };
+    this.textareaRef = createRef();
+  }
+
+  componentDidMount() {
+    this.textareaRef.current.focus();
+  }
 
   onChange = e => {
     this.setState({
@@ -42,6 +50,7 @@ export class CommentEditor extends Component {
           placeholder="Type anything"
           onChange={this.onChange}
           value={text}
+          ref={this.textareaRef}
         />
         <div className={styles.buttons}>
           <Button

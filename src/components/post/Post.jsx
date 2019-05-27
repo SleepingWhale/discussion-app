@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import cn from 'classnames';
 import styles from './Post.module.css';
 import { PostInfo } from '../userInfo';
 import { Button } from '../common';
@@ -25,11 +26,14 @@ export class Post extends PureComponent {
       likes,
       onLikeClick,
       id,
-      commentsCount
+      commentsCount,
+      isLiked
     } = this.props;
     const { isCommentsOpened } = this.state;
-    const commentsCountView =
-      commentsCount > 0 ? `Comment - ${commentsCount}` : 'Comment';
+    const hasComments = commentsCount > 0;
+    const commentsCountView = hasComments
+      ? `Comment - ${commentsCount}`
+      : 'Comment';
 
     return (
       <Fragment>
@@ -39,11 +43,31 @@ export class Post extends PureComponent {
           <div className={styles.text}>{content}</div>
           <div className={styles.buttons}>
             <Button onClick={onLikeClick} mode="primary">
-              <i className="material-icons md-18">thumb_up</i>
+              <i
+                className={cn(
+                  {
+                    'material-icons-outlined': !isLiked,
+                    'material-icons': isLiked
+                  },
+                  'md-18'
+                )}
+              >
+                thumb_up
+              </i>
               {likes > 0 && <span className={styles.ml04}>{likes}</span>}
             </Button>
             <Button onClick={this.toggleComments} mode="primary">
-              <i className="material-icons md-18">mode_comment</i>
+              <i
+                className={cn(
+                  {
+                    'material-icons-outlined': !hasComments,
+                    'material-icons': hasComments
+                  },
+                  'md-18'
+                )}
+              >
+                mode_comment
+              </i>
               <span className={styles.ml04}>{commentsCountView}</span>
             </Button>
           </div>
