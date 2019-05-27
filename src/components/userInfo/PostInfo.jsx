@@ -6,7 +6,7 @@ import { UserPick, Button } from '../common';
 export function PostInfo({ name, nickname, pick, date }) {
   return (
     <div className={styles.container}>
-      <UserPick url={pick} />
+      <UserPick url={pick} title={name} />
       <div>
         <div>
           <strong className={styles.userName}>{name}</strong>
