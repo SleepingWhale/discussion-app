@@ -31,6 +31,7 @@ export class CommentEditor extends Component {
 
   render() {
     const { text } = this.state;
+    const isSubmitDisabled = text.length === 0;
 
     return (
       <div className={styles.container}>
@@ -43,7 +44,11 @@ export class CommentEditor extends Component {
           value={text}
         />
         <div className={styles.buttons}>
-          <Button onClick={this.onSubmit} mode="primary">
+          <Button
+            onClick={this.onSubmit}
+            mode="primary"
+            disabled={isSubmitDisabled}
+          >
             <i className="material-icons md-18">send</i>
             <span className={styles.ml04}>send</span>
           </Button>
