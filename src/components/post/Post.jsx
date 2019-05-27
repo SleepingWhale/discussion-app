@@ -18,8 +18,18 @@ export class Post extends PureComponent {
   };
 
   render() {
-    const { content, author, date, likes, onLikeClick, id } = this.props;
+    const {
+      content,
+      author,
+      date,
+      likes,
+      onLikeClick,
+      id,
+      commentsCount
+    } = this.props;
     const { isCommentsOpened } = this.state;
+    const commentsCountView =
+      commentsCount > 0 ? `Comment - ${commentsCount}` : 'Comment';
 
     return (
       <Fragment>
@@ -30,11 +40,11 @@ export class Post extends PureComponent {
           <div className={styles.buttons}>
             <Button onClick={onLikeClick} mode="primary">
               <i className="material-icons md-18">thumb_up</i>
-              <span className={styles.ml04}>{likes}</span>
+              {likes > 0 && <span className={styles.ml04}>{likes}</span>}
             </Button>
             <Button onClick={this.toggleComments} mode="primary">
               <i className="material-icons md-18">mode_comment</i>
-              <span className={styles.ml04}>Comment - 0</span>
+              <span className={styles.ml04}>{commentsCountView}</span>
             </Button>
           </div>
         </div>

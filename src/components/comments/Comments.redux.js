@@ -43,3 +43,7 @@ export function createComment(comment, postId) {
 export function getComments(state, id) {
   return state.comments[id] || [];
 }
+
+export function getCommentsCount(state, id) {
+  return getComments(state, id).length;
+}

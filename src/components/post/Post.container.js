@@ -1,6 +1,13 @@
 import { connect } from 'react-redux';
 import { Post } from './Post';
 import { likePost } from '../posts/Posts.redux';
+import { getCommentsCount } from '../comments/Comments.redux';
+
+function mapStateToProps(state, ownProps) {
+  return {
+    commentsCount: getCommentsCount(state, ownProps.id)
+  };
+}
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
@@ -11,6 +18,6 @@ function mapDispatchToProps(dispatch, ownProps) {
 }
 
 export const PostContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Post);
