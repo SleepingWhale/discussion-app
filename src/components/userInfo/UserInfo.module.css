@@ -4,14 +4,10 @@
   justify-content: flex-start;
 }
 
-.userName,
-.time {
-  display: block;
-}
-
 .userName {
   font-size: 1rem;
   color: #5d5d5d;
+  margin-right: 0.4rem;
 }
 
 .time {
