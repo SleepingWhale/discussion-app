@@ -23,10 +23,10 @@
   margin-top: 0.8rem;
 }
 
-.buttons > * {
-  margin-right: 0.4rem;
-}
-
 .ml04 {
   margin-left: 0.4rem;
+}
+
+.mr04 {
+  margin-right: 0.4rem;
 }

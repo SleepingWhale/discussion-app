@@ -1,6 +1,6 @@
 import React from 'react';
 import TimeAgo from 'timeago-react';
-import styles from './UserInfo.module.css';
+import styles from './PostInfo.module.css';
 import { UserPick, Button } from '../common';
 
 export function PostInfo({ name, nickname, pick, date }) {
@@ -16,11 +16,14 @@ export function PostInfo({ name, nickname, pick, date }) {
         </div>
         <TimeAgo datetime={date} className={styles.time} live={false} />
       </div>
-      <div className={styles.followButton}>
-        <Button type="button" onClick={() => {}} mode="outline">
-          Follow
-        </Button>
-      </div>
+      <Button
+        type="button"
+        onClick={() => {}}
+        mode="outline"
+        className={styles.followButton}
+      >
+        Follow
+      </Button>
     </div>
   );
 }

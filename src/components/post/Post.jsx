@@ -42,7 +42,11 @@ export class Post extends PureComponent {
           <hr className={styles.delimiter} />
           <div className={styles.text}>{content}</div>
           <div className={styles.buttons}>
-            <Button onClick={onLikeClick} mode="primary">
+            <Button
+              onClick={onLikeClick}
+              mode="primary"
+              className={styles.mr04}
+            >
               <i
                 className={cn(
                   {
