@@ -30,3 +30,31 @@
 .mr04 {
   margin-right: 0.4rem;
 }
+
+.postHeader {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userName {
+  font-size: 1rem;
+  color: #5d5d5d;
+  margin-right: 0.4rem;
+}
+
+.time {
+  color: #949494;
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.userLink {
+  font-size: 1rem;
+  color: #949494;
+  text-decoration: none;
+}
+
+.followButton {
+  margin-left: auto;
+}

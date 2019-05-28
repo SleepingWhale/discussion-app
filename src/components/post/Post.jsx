@@ -1,8 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
 import cn from 'classnames';
+import TimeAgo from 'timeago-react';
 import styles from './Post.module.css';
-import { PostInfo } from '../userInfo';
-import { Button } from '../common';
+import { Button, UserPick } from '../common';
 import { CommentsContainer } from '../comments';
 
 export class Post extends PureComponent {
@@ -29,6 +29,7 @@ export class Post extends PureComponent {
       commentsCount,
       isLiked
     } = this.props;
+    const { pick, name, nickname } = author;
     const { isCommentsOpened } = this.state;
     const hasComments = commentsCount > 0;
     const commentsCountView = hasComments
@@ -38,7 +39,26 @@ export class Post extends PureComponent {
     return (
       <Fragment>
         <div className={styles.container}>
-          <PostInfo {...author} date={date} />
+          <div className={styles.postHeader}>
+            <UserPick url={pick} title={name} />
+            <div>
+              <div>
+                <strong className={styles.userName}>{name}</strong>
+                <a href="/" className={styles.userLink}>
+                  {nickname}
+                </a>
+              </div>
+              <TimeAgo datetime={date} className={styles.time} live={false} />
+            </div>
+            <Button
+              type="button"
+              onClick={() => {}}
+              mode="outline"
+              className={styles.followButton}
+            >
+              Follow
+            </Button>
+          </div>
           <hr className={styles.delimiter} />
           <div className={styles.text}>{content}</div>
           <div className={styles.buttons}>
