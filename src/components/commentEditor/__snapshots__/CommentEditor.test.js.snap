@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentEditor should render correctly 1`] = `
+<CommentEditor
+  onSubmit={[MockFunction]}
+>
+  <div
+    className="container"
+  >
+    <textarea
+      className="text"
+      maxLength={1000}
+      onChange={[Function]}
+      placeholder="Type anything"
+      rows={3}
+      value=""
+    />
+    <div
+      className="buttons"
+    >
+      <Button
+        disabled={true}
+        mode="primary"
+        onClick={[Function]}
+      >
+        <button
+          className="base primary"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons md-18"
+          >
+            send
+          </i>
+          <span
+            className="ml04"
+          >
+            send
+          </span>
+        </button>
+      </Button>
+    </div>
+  </div>
+</CommentEditor>
+`;

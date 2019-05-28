@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment should render correctly 1`] = `
+<div
+  className="container"
+>
+  <UserPick
+    title="Agent Smith"
+    url="http://placekitten.com/32/32?image=2"
+  />
+  <div
+    className="comment"
+  >
+    content
+  </div>
+</div>
+`;

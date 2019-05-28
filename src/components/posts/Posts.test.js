@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './Posts';
+import { shallow } from 'enzyme';
+import { Posts } from './Posts';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Posts', () => {
+  it('should render correctly', () => {
+    const component = shallow(<Posts posts={[]} />);
+    expect(component).toMatchSnapshot();
+  });
 });

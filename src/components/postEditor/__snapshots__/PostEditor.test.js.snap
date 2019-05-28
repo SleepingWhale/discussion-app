@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostEditor should render correctly 1`] = `
+<PostEditor
+  onSubmit={[MockFunction]}
+>
+  <div
+    className="container"
+  >
+    <div
+      className="heading"
+    >
+      <UserPick
+        title=""
+        url={null}
+      >
+        <div
+          className="placeHolder"
+          title=""
+        >
+          <i
+            className="material-icons md-24 md-light"
+          >
+            sentiment_very_satisfied
+          </i>
+        </div>
+      </UserPick>
+      <span
+        className="question"
+      >
+        What's happening?
+      </span>
+    </div>
+    <textarea
+      className="text"
+      maxLength={1000}
+      onChange={[Function]}
+      placeholder="Write something..."
+      rows={4}
+      value=""
+    />
+    <div
+      className="buttons"
+    >
+      <Button
+        disabled={true}
+        mode="primary"
+        onClick={[Function]}
+      >
+        <button
+          className="base primary"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <span>
+            Post
+          </span>
+        </button>
+      </Button>
+    </div>
+  </div>
+</PostEditor>
+`;
