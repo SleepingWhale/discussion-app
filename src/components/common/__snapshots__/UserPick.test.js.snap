@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UserPick should render img correctly 1`] = `
-<img
-  alt="u"
-  className="img"
-  src="/some/path"
-  title="hello world"
-/>
+<div>
+  <img
+    alt="u"
+    className="img"
+    src="/some/path"
+    title="hello world"
+  />
+</div>
 `;
 
 exports[`UserPick should render placeholder correctly 1`] = `
