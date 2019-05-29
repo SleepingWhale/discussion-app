@@ -4,7 +4,9 @@ import styles from './UserPick.module.css';
 
 export function UserPick({ url, title }) {
   return url ? (
-    <img src={url} className={styles.img} alt="u" title={title} />
+    <div>
+      <img src={url} className={styles.img} alt="u" title={title} />
+    </div>
   ) : (
     <div className={styles.placeHolder} title={title}>
       <i className="material-icons md-24 md-light">sentiment_very_satisfied</i>
