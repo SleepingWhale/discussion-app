@@ -1,5 +1,5 @@
 // Actions
-const UPDATE = 'discussion-app/search/UPDATE';
+export const UPDATE = 'discussion-app/search/UPDATE';
 
 // Reducer
 export default function reducer(state = '', action = {}) {

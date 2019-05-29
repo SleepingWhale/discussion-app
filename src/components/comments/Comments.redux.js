@@ -1,7 +1,7 @@
 import { guid } from '../../utils';
 
 // Actions
-const CREATE = 'discussion-app/comments/CREATE';
+export const CREATE = 'discussion-app/comments/CREATE';
 
 // Reducer
 export default function reducer(state = {}, action = {}) {
@@ -27,13 +27,14 @@ export default function reducer(state = {}, action = {}) {
 }
 
 // Action Creators
-export function createComment(comment, postId) {
+export function createComment({ content, author }, postId) {
   return {
     type: CREATE,
     comment: {
       id: guid(),
       date: new Date(),
-      ...comment
+      content,
+      author
     },
     postId
   };

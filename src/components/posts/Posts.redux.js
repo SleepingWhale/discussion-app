@@ -1,8 +1,8 @@
 import { guid } from '../../utils';
 
 // Actions
-const CREATE = 'discussion-app/posts/CREATE';
-const LIKE = 'discussion-app/posts/LIKE';
+export const CREATE = 'discussion-app/posts/CREATE';
+export const LIKE = 'discussion-app/posts/LIKE';
 
 // Reducer
 export default function reducer(state = [], action = {}) {
@@ -30,13 +30,14 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-export function createPost(post) {
+export function createPost({ content, author }) {
   return {
     type: CREATE,
     post: {
       id: guid(),
       date: new Date(),
-      ...post,
+      content,
+      author,
       likes: 0,
       isLiked: false
     }
