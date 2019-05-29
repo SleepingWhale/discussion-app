@@ -10,8 +10,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onChange(e) {
-      dispatch(updateSearch(e.target.value));
+    onChange(value) {
+      dispatch(updateSearch(value));
     }
   };
 }

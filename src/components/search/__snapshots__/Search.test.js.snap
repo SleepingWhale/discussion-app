@@ -1,11 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search should render correctly 1`] = `
-<input
-  className="input"
-  onChange={[MockFunction]}
-  placeholder="Search"
-  type="search"
-  value="text"
-/>
+<div
+  className="container"
+>
+  <input
+    className="input"
+    onChange={[Function]}
+    placeholder="Search"
+    type="search"
+    value="text"
+  />
+  <button
+    className="clearBtn"
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="material-icons md-18"
+    >
+      cancel
+    </i>
+  </button>
+</div>
 `;

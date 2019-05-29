@@ -1,3 +1,19 @@
+.container {
+  position: relative;
+}
+
+.clearBtn {
+  padding: 3px;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.35rem;
+  color: #7b7b7b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 .input {
   -webkit-appearance: none;
   width: 100%;
