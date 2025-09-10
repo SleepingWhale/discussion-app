@@ -10,7 +10,7 @@
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.1",
     "timeago-react": "^2.0.1"
   },
@@ -33,7 +33,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "enzyme-to-json": "^3.3.5",
-    "eslint": "^5.16.0",
+    "eslint": "^9.32.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.2",
